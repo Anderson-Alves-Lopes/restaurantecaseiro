@@ -270,14 +270,52 @@ section.cozinhar p{
 }
 .cozinhar-card-box{
     display:grid;
+    gap:20px;
     grid-template-columns:repeat(3,1fr);
 }
-.cozinhar-card{
+section.cozinhar  .cozinhar-card{
     padding:40px 20px;
+    background-color: #fff;
+    margin:0 auto;
 }
 section.cozinhar .cozinhar-card h2{
     text-align: left;
     font-size:100px;
     font-weight:bold;
+    color:#111;
 }
-
+section.cozinhar .cozinhar-card h3{
+   font-size:40px;
+   font-family:serif;
+   font-style:oblique;
+   font-weight:bold;
+}
+section.cozinhar .cozinhar-card p{
+    color:#111;
+    text-shadow:none;
+}
+section.cozinhar .cozinhar-card img{
+    margin:20px 0;
+}
+section.cozinhar .cozinhar-card.two{
+    background-color:rgba(0,0,0,0.6);
+}
+section.cozinhar .cozinhar-card.two h2{
+    color:var(--color-orange-dark);
+}
+section.cozinhar .cozinhar-card.two p,
+section.cozinhar .cozinhar-card.two h3,
+section.cozinhar .cozinhar-card.three h2,
+section.cozinhar .cozinhar-card.three h3,
+section.cozinhar .cozinhar-card.three p {
+    color:#fff;
+}  
+section.cozinhar .cozinhar-card.three{
+    background-color:var(--color-orange-dark);
+}
+/* ==== section-asiatica ==== */
+section.asiatica{
+    height:500px;
+    width:100%;
+    background-image:linear-gradient(to right,#fff 50%, var(--color-yellow) 50%);
+}
