@@ -15,6 +15,16 @@
         writing-mode: horizontal-tb;
         width:100%;
     }
+    section.reservas .reservas-info{
+        flex-direction:column-reverse;
+    }
+    section.eventos .container{
+        flex-direction:column;
+    }
+    .eventos-info .eventos-text{
+        width:90%;
+        margin:20px auto;
+    }
 }
 @media screen and (max-width: 700px){
     header ul{display:none;}
@@ -81,6 +91,13 @@
         width:100%;
         margin-top:20px;
     }
+    footer .footer-info{
+        flex-direction:column-reverse;
+        text-align: center;
+    }
+    .footer-direitos{
+        margin-top:10px;
+    }
 }
 @media screen and (max-width: 600px){
     section.banner h1{
@@ -92,7 +109,6 @@
     section.meate .meate-img{
         min-height:400px;
     }
-    /* section.asiatica{position:initial;} */
     .asiatica-text{
         display:flex;
         flex-direction:column;
@@ -114,6 +130,20 @@
     section.agricolas .agricolas-img-box img{
         width:80%;
         height:400px;
+    }
+    .eventos-info .eventos-text h3{
+        font-size:35;
+        text-align:center;
+    }
+    .eventos-form input[type=submit]{
+        position:initial;
+        width:45%;
+    }
+    .eventos-form p{
+        max-width:100%;
+        font-size:15px;
+        line-height:20px;
+        margin-top:10px;
     }
 }
 @media screen and (max-width: 450px){
@@ -144,6 +174,23 @@
         width: 95%;
     }
     section.meate .meate-text{font-size:65px;}
+    section.reservas .reservas-info h3{font-size:20px;}
+    .reservas-icons{
+        flex-direction:column;
+    }
+    .reservas-text .reservas-social a{
+        font-size:25px;
+    }
+    .eventos-form input{
+        width:90%;
+    }
+    .eventos-form input[name=data]{
+        width:60%;
+    }
+    .eventos-form input[name=horas]{
+        width:25%;
+        
+    }
 }
 @media screen and (max-width: 350px){
     section.banner h1{

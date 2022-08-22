@@ -4,6 +4,7 @@
     padding:0;
     box-sizing:border-box;
     font-family: 'Roboto', sans-serif;
+    scroll-behavior: smooth;
 }
 /* body{
     overflow:clip;
@@ -114,8 +115,9 @@ section.banner aside .closed-menu{
     text-align:right;
     padding-top:15px;
 }
-section.banner aside .closed-menu img{
-    width:40px;
+section.banner aside .closed-menu img,
+#closedModal img{
+    width:25px;
     margin:15px;
 }
 section.banner aside nav{
@@ -458,7 +460,7 @@ section.reservas .container{
     align-items:center;
     margin:20px 0;
 }
-.reservas-modal button{
+.reservas-modal #openModal{
    margin: auto;
    color:#111;
    background-color:var(--color-yellow);
@@ -473,7 +475,8 @@ section.reservas .container{
    transition:all ease 0.4s;
 
 }
-.reservas-modal button:hover{
+.reservas-modal #openModal:hover,
+.reservas-modal-box #closedModal:hover{
     opacity:0.7;
     box-shadow: 2px 2px 10px 0px rgba(242, 236, 236, 0.75);
 }
@@ -484,10 +487,18 @@ section.reservas .container{
    background-color:rgba(0,0,0,0.6);
    color:#fff; 
    width:0;
+   opacity:0;
    overflow-y:auto;
    overflow-x:hidden;
+   transition:all ease 0.7s;
 
 }
+.reservas-modal-box #closedModal{
+   background-color:var(--color-yellow);
+   cursor:pointer;
+   display:inline-block;
+}
+
 .reservas-modal-box form h4{
     color:var(--color-orange-dark);
     font-size:25px;
@@ -519,18 +530,19 @@ input::placeholder{
 section.reservas .reservas-info{
     display:flex;
 }
-section.reservas .reservas-info h3{font-size:25px;}
+
 .reservas-info h3,
-.reservas-icons{
+.reservas-icons h4{
     word-spacing:10px;
     line-height:28px;
-    font-size:20px;
+    font-size:17px;
     color:#fff;
     margin:20px 0;
     text-transform:uppercase;
     font-family:serif;
     font-weight:200;
 }
+section.reservas .reservas-info h3{font-size:25px;}
 .reservas-text{
     flex:1;
     padding:30px;
@@ -560,3 +572,158 @@ section.reservas .reservas-info h3{font-size:25px;}
     align-items:center;
     text-align: center;
 }
+/* ==== section-eventos === */
+section.eventos{
+    position:relative;
+}
+
+section.eventos .eventos-cubo{
+    position:absolute;
+    width:40vw;
+    height:40vh;
+    background-color:var(--color-yellow);
+    z-index: 0;
+}
+section.eventos .eventos-cubo-bottom{
+    position:absolute;
+    right:0;
+    bottom:20px;
+    width:40vw;
+    height:30vh;
+    background-color:var(--color-orange-dark);
+    z-index: 0;
+}
+section.eventos .container{
+    padding:40px 0;
+}
+.eventos-info{
+    display:flex;
+    flex:1;
+    position:relative;
+    z-index:2;
+}
+.eventos-info .eventos-text{
+ background-color:var(--color-orange-dark);
+ padding:20px 30px;
+}
+.eventos-info .eventos-text h3{
+    font-size:40px;
+    font-family:serif;
+    font-weight:900;
+    color:#fff;
+    text-transform:uppercase;
+}
+.eventos-info .eventos-text strong{
+   color:#000;
+   font-family:serif;
+}
+.eventos-info .eventos-text p{
+    color:#333;
+    font-weight:bold;
+    font-size:17px;
+    line-height:23px;
+}
+.eventos-form{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    flex:1;
+    position:relative;
+    z-index:999;
+}
+.eventos-form form{
+    width:90%;
+    position:relative;
+    margin:auto;
+    padding:20px;
+    background-color:#111;
+    color:#fff;
+}
+.eventos-form h4{
+  font-size:25px;
+  color:var(--color-orange-dark);
+  font-family:serif;
+  text-transform:uppercase;
+}
+.eventos-form input{
+    width:45%;
+    height:40px;
+    border:0;
+    border-bottom:1px solid #fff;
+    background-color:transparent;
+    padding-left:5px;
+    margin:0 2%;
+    outline:none;
+    
+}
+.eventos-form input[name=data]{
+    width:25%;
+}
+.eventos-form input[name=horas]{
+    width:15%;
+    
+}
+.eventos-form input[type=submit]{
+    position:absolute; 
+    right:30px;
+    top:55%;
+    border:0;
+    background-color:var(--color-yellow);
+    width:30%;
+    height:35px;
+    margin:20px auto;
+    border-radius:5px;
+    font-size:20px;
+    color:#111;
+    font-weight:bold;
+    cursor:pointer;
+    box-shadow: 0px 0px 5px 2px rgba(255,255,255,1);
+    transition:all ease 0.4s;
+}
+.eventos-form input[type=submit]:hover{
+    opacity:0.7;
+    box-shadow: 0px 0px 10px 5px rgba(255,255,255,1);
+}
+.eventos-form p{
+    max-width:60%;
+    font-size:15px;
+    line-height:20px;
+    margin-top:10px;
+}
+/* ===== footer ====== */
+footer{
+    background-image:linear-gradient(to bottom, #111 60%, #141414 20%);
+    color:#fff;
+}
+footer .container{
+    flex-direction:column;
+}
+footer .footer-text{
+    max-width:600px;
+    margin:20px auto;
+    padding-bottom:20px;
+}
+footer .footer-text a{color:var(--color-orange-dark);}
+footer .footer-info{
+    display:flex;
+    justify-content:space-between;
+    padding-bottom:10px;
+}
+.footer-direitos{
+    font-size:13px;
+}
+.footer-social{
+    flex:1;
+    display:flex;
+    gap:20px;
+    font-size:30px;
+    justify-content:center;
+}
+.footer-social a{
+    color:#fff;
+    
+}
+.footer-social a:hover{
+    opacity:0.6;
+}
+

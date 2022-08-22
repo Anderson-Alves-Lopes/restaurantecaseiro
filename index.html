@@ -14,6 +14,7 @@
         <link href="assets/css/media.css" rel="stylesheet"/>
         <script src="https://kit.fontawesome.com/69c52f7d8c.js" crossorigin="anonymous"></script>
     </head>
+    <body>
     <header>
         <div class="container">
            
@@ -23,8 +24,8 @@
              </div><!--logo-->
             <ul>
                 <li><a href="">Cardápio</a><div class="line"></div></li>
-                <li><a href="">Reservas</a><div class="line"></div></li>
-                <li><a href="">Eventos</a><div class="line"></div></li>
+                <li><a href="#reserva">Reservas</a><div class="line"></div></li>
+                <li><a href="#evento">Eventos</a><div class="line"></div></li>
                 <li><a href="">Sobre</a><div class="line"></div></li>
             </ul>
            </nav>
@@ -144,6 +145,7 @@
             <div class="reservas-modal">
               <button id="openModal">Faça sua reserva</button>
               <div class="reservas-modal-box">
+                <div id="closedModal"><img src="assets/images/x.png"/></div>
               <form action="/action_page.php">
                   <h4>Solicite uma reserva</h4>
                   <input type="text" name="data" placeholder="Data"/>
@@ -152,7 +154,7 @@
                   <input type="tel" name="telefone" placeholder="Telefone"/>
                   <input type="email" name="e-mail" placeholder="E-mail"/>
                   <input type="text" name="observacao" placeholder="Obs."/>
-                
+                  <input type="submit" name="acao" value="Enviar">
               </form>
               <div class="reservas-modal-text">
                   <p>
@@ -167,7 +169,7 @@
               </div><!--reservas-modal-text-->
             </div><!--reservas-modal-box-->
             </div><!--reservas-modal-->
-            <div class="reservas-info">
+            <div id="reserva" class="reservas-info">
                <div class="reservas-text">
                   <h3>COMIDA FRESCA TODOS OS DIAS</h3>
                   <p>Nosso restaurante é um restaurante familiar que tem servido com orgulho na década de 1980, localizado na esquina da Lorem Ipisum com a Dolor Sit  n°:444 em São Paulo</p>
@@ -182,19 +184,83 @@
                <div class="reservas-icons">
                  <div class="reservas-icon">
                    <img src="assets/images/tray (1).png"/>
-                   <h3>Pratos especiais</h3>
+                   <h4>Pratos especiais</h4>
                  </div><!--reservas-icon-->
                  <div class="reservas-icon">
                   <img src="assets/images/tray.png"/>
-                  <h3>Excelente atendimento</h3>
+                  <h4>Excelente atendimento</h4>
                 </div><!--reservas-icon-->
                 <div class="reservas-icon">
                   <img src="assets/images/tea-cup.png"/>
-                  <h3>Bebidas deliciosas</h3>
+                  <h4>Bebidas deliciosas</h4>
                 </div><!--reservas-icon-->
                </div><!--reservas-icons-->
             </div><!--reservas-info-->
            </div><!--container-->
         </section><!--reservas-->
+        <section id="evento" class="eventos">
+          <div class="eventos-cubo"></div>
+          <div class="container">
+              <div class="eventos-info">
+                <div class="eventos-text">
+                    <h3>Faça seu<br/><strong>Evento conosco</strong></h3>
+                     <p>Temos experiência  para realizar diferentes perfis de eventos, de pequenas a grandes confraternizações.
+                      O Restaurante Caseiro é famoso por sua dedicação aos clientes e atenção aos mínimos detalhes. Estamos prontos para receber eventos corporativos, casamentos ou jantares com toda a excelência esperada numa data especial.Com seu charmoso e aconchegante ambiente, um sofisticado menu e uma excelente carta de vinhos, o Restaurante Caseiro tem tudo de melhor para oferecer ao seu evento.
+                      <br/>
+                      Mande sua solicitação para nós e consulte as possibilidades.
+                      <br/>
+                      Horário de atendimento do escritório: segunda a sexta-feira das 9h às 18h.
+                      </p>
+                </div><!--eventos-text-->
+              </div><!--eventos-info-->
+              <div class="eventos-form">
+                <form action="/action_page.php">
+                  <h4>Solicite uma reserva</h4>
+                  <input type="text" name="nome" placeholder="Nome"/>
+                  <input type="tel" name="telefone" placeholder="Telefone"/>
+                  <input type="email" name="e-mail" placeholder="E-mail"/>
+                  <input type="text" name="data" placeholder="Data"/>
+                  <input type="text" name="horas" placeholder="Horário"/>
+                  <input type="text" name="pessoas" placeholder="Quantas pessoas"/>
+                  
+                  <input type="text" name="observacao" placeholder="Obs."/>
+                  <input type="submit" name="acao" value="Enviar">
+                  <p>
+                    <b>ATENÇÃO:</b> Após a sua <b>SOLICITAÇÃO DE RESERVA</b> , aguarde o nosso contato com a <b>CONFIRMAÇÃO</b> .
+                   </p>
+                   <p>
+                     “Por motivos de segurança aos nossos clientes, não é permitido a entrada de convidados que não<br>
+                     estejam trajados de acordo com as normas da casa, tais como: camisetas de times nacionais ou<br>
+                     qualquer acessório com o símbolo, chinelos ou sandálias rasteiras sem amarração e correntes<br>
+                     grossas.”.
+                 </p>
+              </form>
+              </div><!--eventos-form-->
+          </div><!--container-->
+          <div class="eventos-cubo-bottom"></div>
+        </section><!--eventos-->
     </main>
+    <footer>
+      <div class="container">
+         <div class="footer-text">
+          <p>Este projeto é baseado em um layout do site <a href="https://nicepage.com/pt/c/comida-e-restaurante-modelos-html">Nicepage</a>  eu tomei a liberdade de fazer algumas alterações e melhorias.
+          <br/>
+          Mas deixo bem claro que toda a estrutura foi feito por minha pessoa sem nem um tipo de cópia do código original a usando apenas as imagens e o design.
+          </p>
+         </div>
+          <div class="footer-info">
+             <div class="footer-direitos">
+             <p>Todos os direitos reservados a Anderson Alves/ Pindamonhangaba/SP</p> 
+             </div>
+             <div class="footer-social">
+              <a  target="_blank" href="https://www.linkedin.com/in/anderson-alves-lopes-04670722b/"><i class="fa-brands fa-linkedin-in"></i></a>
+              <a target="_blank" href="https://github.com/Anderson-Alves-Lopes"><i class="fa-brands fa-github"></i></a>
+              <a target="_blank" href="mailto:neno-alveslopes@hotmail.com"><i class="fa-regular fa-envelope"></i></a>
+              <a target="_blank" href="https://web.whatsapp.com/send?phone=5512992210870"><i class="fa-brands fa-whatsapp"></i></a>
+             </div>
+          </div><!--footer-info-->
+      </div><!--container-->
+    </footer>
+    <script src="assets/js/script.js"></script>
+  </body>
 </html>
