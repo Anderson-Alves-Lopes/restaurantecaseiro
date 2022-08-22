@@ -117,8 +117,8 @@ section.banner aside .closed-menu{
 }
 section.banner aside .closed-menu img,
 #closedModal img{
-    width:25px;
-    margin:15px;
+    width:20px;
+    margin:10px;
 }
 section.banner aside nav{
     background-color:rgba(0,0,0,0.9);
@@ -445,6 +445,7 @@ section.agricolas .agricolas-text p{
 section.reservas{
     width:100%;
     min-height:100vh;
+    height:auto;
     background-image:url('../images/-min_03.jpg');
     background-size:cover;
     background-repeat:no-repeat;
@@ -481,12 +482,14 @@ section.reservas .container{
     box-shadow: 2px 2px 10px 0px rgba(242, 236, 236, 0.75);
 }
 .reservas-modal-box{
-   position:absolute;
-   top:50px;
-   right:0;
+   position: absolute;
+   top:50%;
+   left:50%;
+   transform:translate(-50%,-50%);
+   display:none;
    background-color:rgba(0,0,0,0.6);
    color:#fff; 
-   width:0;
+   width:80%;
    opacity:0;
    overflow-y:auto;
    overflow-x:hidden;
@@ -508,16 +511,30 @@ section.reservas .container{
 .reservas-modal-box form{
     width:100%;
     padding:20px;
+    text-align: center;
 }
 .reservas-modal-box input{
-    width:45%;
+    width:40%;
     height:40px;
-    margin:10px;
     padding:10px;
+    margin:10px;
     border:0;
     border-bottom:1px solid #fff;
     background-color:transparent;
     outline:none;
+}
+.reservas-modal-box input[type=submit]{
+    color:#111;
+    background-color:var(--color-yellow);
+    font-size:18px;
+    font-weight:900;
+    border-radius:10px;
+    border:none;
+    cursor:pointer;
+    transition:all ease 0.4s;
+}
+.reservas-modal-box input[type=submit]:hover{
+    opacity:0.5;
 }
 input::placeholder{
     color:#fff;

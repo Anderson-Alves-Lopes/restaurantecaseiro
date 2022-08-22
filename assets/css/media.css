@@ -17,7 +17,9 @@
     }
     section.reservas .reservas-info{
         flex-direction:column-reverse;
+        margin-top:50px;
     }
+    
     section.eventos .container{
         flex-direction:column;
     }
@@ -25,6 +27,7 @@
         width:90%;
         margin:20px auto;
     }
+
 }
 @media screen and (max-width: 700px){
     header ul{display:none;}
@@ -131,6 +134,13 @@
         width:80%;
         height:400px;
     }
+    .reservas-modal-box{
+        width:100%;
+        top:55%;
+    }
+    .reservas-modal-box form h4{
+        font-size:20px;
+    }
     .eventos-info .eventos-text h3{
         font-size:35;
         text-align:center;
@@ -145,6 +155,7 @@
         line-height:20px;
         margin-top:10px;
     }
+
 }
 @media screen and (max-width: 450px){
     section.banner h1{
@@ -191,6 +202,18 @@
         width:25%;
         
     }
+    .reservas-text{
+        flex:1;
+        padding:20px;
+    }
+    .reservas-modal-box p{
+        font-size:13px;
+        line-height:20px;
+    }
+    .reservas-modal-box form{
+        padding:10px;
+    }
+    .reservas-modal-text{padding:10px;}
 }
 @media screen and (max-width: 350px){
     section.banner h1{

@@ -16,20 +16,21 @@ closedMenu.addEventListener('click',function(){
 });
 openModal.addEventListener('click',function(){
     openModal.style.opacity = '0';
-    modalBox.style.width = '40vw';
+    modalBox.style.display = 'block';
     setTimeout(function(){
-        modalBox.style.opacity = '1';
         openModal.style.display = 'none';
-    },600);
+        modalBox.style.opacity = '1';
+        
+    },800);
     
 });
 closedModal.addEventListener('click',function(){
-    openModal.style.opacity = '1';
+    openModal.style.display = 'block';
     modalBox.style.opacity = '0'
     setTimeout(function(){
-        modalBox.style.width = '0';
-        openModal.style.display = 'block';
-    },500)
+        modalBox.style.display = 'none';
+        openModal.style.opacity = '1';
+    },600)
     
     
 });
